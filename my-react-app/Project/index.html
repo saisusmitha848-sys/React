@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Interview Coach</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <div class="container">
+
+        <div class="header">
+            <h1>AI Interview Coach</h1>
+            <p>Welcome, {{ user }}</p>
+
+            <a href="/logout" class="logout-btn">Logout</a>
+        </div>
+
+        <div class="interview-box">
+
+            <h2>Mock Interview Assessment</h2>
+
+            <form action="/submit" method="POST">
+
+                <div class="question">
+                    <label>
+                        1. Tell us about your Python skills.
+                    </label>
+                    <textarea
+                        name="q1"
+                        rows="4"
+                        placeholder="Enter your answer here..."
+                        required></textarea>
+                </div>
+
+                <div class="question">
+                    <label>
+                        2. What is your biggest strength?
+                    </label>
+                    <textarea
+                        name="q2"
+                        rows="4"
+                        placeholder="Enter your answer here..."
+                        required></textarea>
+                </div>
+
+                <div class="question">
+                    <label>
+                        3. Describe a situation where you worked in a team.
+                    </label>
+                    <textarea
+                        name="q3"
+                        rows="4"
+                        placeholder="Enter your answer here..."
+                        required></textarea>
+                </div>
+
+                <div class="question">
+                    <label>
+                        4. What is a Database?
+                    </label>
+                    <textarea
+                        name="q4"
+                        rows="4"
+                        placeholder="Enter your answer here..."
+                        required></textarea>
+                </div>
+
+                <div class="question">
+                    <label>
+                        5. What is your career goal?
+                    </label>
+                    <textarea
+                        name="q5"
+                        rows="4"
+                        placeholder="Enter your answer here..."
+                        required></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">
+                    Submit Interview
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
